@@ -9,11 +9,12 @@ html {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: @textFont;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: @headingFont;
+  color: @textColor;
 }
 
 h1 {
@@ -31,12 +32,14 @@ h4 {
 }
 
 a{
-  font-family: 'Roboto', sans-serif;
-  color:@shark;
+  font-family: @textFont;
+  color:@textColor;
   font-size: 1.5rem;
 }
 
 p {
+  font-family: @textFont;
+  color: @textColor;
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
@@ -47,8 +50,7 @@ img {
   height: auto;
 }
 
-.container {
-  max-width: 800px;
+.bigContainer {
   width: 100%;
   margin: 0 auto;
 }

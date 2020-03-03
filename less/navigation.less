@@ -1,0 +1,43 @@
+.homeHeader{
+    //background styles
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/headerBGImg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    //general styles for the header/nav section
+    height: 95vh;
+    .padMarg(1% 0 0, 0); 
+
+//nav styles
+    .navDiv{
+        .flexLayout(row, space-between, center);
+
+        img{
+            .padMarg(0, 0 1%);
+        }//capture logo styling
+        
+        .navDivTwo{
+            .flexLayout(row, flex-end, center);
+            
+            width: 60%;
+            button{
+                .padMarg(0, 0 3%);
+            }
+
+            nav{
+                width: 30%;
+               .flexLayout(row, space-between, center); 
+               a{
+                   .padMarg(0 11%, 0);
+                   text-decoration: none;
+               }//closes a
+            }//closes nav
+        }//closes navDivTwo
+    }//closes navDiv
+
+//headerContent Styles
+    .headerContent{
+        .flexLayout(column, center, center);
+        height: 90vh;
+    }//closes headerContent
+}//closes homeHeader
