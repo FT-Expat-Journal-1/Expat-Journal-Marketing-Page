@@ -133,7 +133,7 @@ html {
 }
 html,
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 h1,
 h2,
@@ -155,15 +155,15 @@ h4 {
   padding-bottom: 10px;
 }
 a {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   font-size: 1.5rem;
 }
 p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding-bottom: 10px;
 }
 img {
@@ -233,4 +233,34 @@ img {
 .theButton:hover {
   background: #F4F4F4;
   color: #38A1DE;
+}
+.separatingDivs {
+  height: 5vh;
+  background-color: #F4F4F4;
+}
+.sections {
+  height: 55vh;
+  background-color: #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sections .imagesDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2%;
+  margin: 2%;
+  max-width: 55%;
+}
+.sections .imagesDiv .secondImg {
+  padding: 0;
+  margin: 0 5%;
+}
+.sections .contentDiv {
+  max-width: 40%;
+  padding: 0;
+  margin: 0 10%;
 }
