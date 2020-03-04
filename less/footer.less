@@ -4,9 +4,16 @@ footer{
     background-image: url(../images/footerImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    @media@mobile{
+        background-size: auto;
+    }
+    
 
     img{
         transform: scale(1.5);
+        @media@mobile{
+            transform: scale(1);
+        }
     }
 
     //general styles for the footer section

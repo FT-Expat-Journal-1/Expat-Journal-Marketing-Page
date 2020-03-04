@@ -293,8 +293,18 @@ footer {
   padding: 1% 0 0;
   margin: 0;
 }
+@media (max-width: 500px) {
+  footer {
+    background-size: auto;
+  }
+}
 footer img {
   transform: scale(1.5);
+}
+@media (max-width: 500px) {
+  footer img {
+    transform: scale(1);
+  }
 }
 footer .footerStylingDiv {
   display: flex;
