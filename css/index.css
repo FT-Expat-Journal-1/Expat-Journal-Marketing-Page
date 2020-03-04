@@ -452,3 +452,8 @@ footer .footerStylingDiv {
     font-size: 3.5vw;
   }
 }
+@media (max-width: 800px) {
+  .infoBoxes .teamBox {
+    width: 35%;
+  }
+}
