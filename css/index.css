@@ -402,7 +402,7 @@ footer .footerStylingDiv {
   background-color: #222222;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 500px), (max-width: 800px) {
@@ -418,6 +418,14 @@ footer .footerStylingDiv {
     align-items: center;
   }
 }
+@media (max-width: 1000px) {
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .sections .imagesDiv {
   display: flex;
   flex-direction: row;
@@ -427,11 +435,22 @@ footer .footerStylingDiv {
   margin: 2%;
   max-width: 55%;
 }
+@media (max-width: 1000px) {
+  .sections .imagesDiv {
+    max-width: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
 .sections .imagesDiv .secondImg {
   padding: 0;
   margin: 0 5%;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 1000px) {
   .sections .imagesDiv .secondImg {
     padding: 0;
     margin: 0;
@@ -465,6 +484,13 @@ footer .footerStylingDiv {
     margin: 5% 0;
     max-width: 80%;
     text-align: center;
+  }
+}
+@media (max-width: 1000px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 0;
+    max-width: 30%;
   }
 }
 @media (max-width: 500px), (max-width: 800px) {
