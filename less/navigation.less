@@ -20,7 +20,7 @@
     .navDiv{
         .flexLayout(row, space-between, center);
 
-        @media@mobile{
+        @media@mobile,@tablet{
             .flexLayout(column,center,center);
         }
 
@@ -35,31 +35,35 @@
             @media@mobile{
                 .padMarg(0, 3% 0 2% 0);
             }
+
         }
        
         .navDivTwo{
             .flexLayout(row, flex-end, center);
 
             @media@tablet{
-                .flexLayout(row, center, center);
+                .flexLayout(column, center, center);
             }
             
             width: 60%;
             button{
                 .padMarg(0, 0 3%);
                 @media@tablet{
-                    display: none;
+                    .padMarg(0, 3% 0);
                 }
             }
 
             nav{
                 width: 30%;
                .flexLayout(row, space-between, center); 
+    
                a{
                    .padMarg(0 10%, 0);
                    text-decoration: none;
                    @media@tablet{
-                       display:none;
+                       font-size: 1.5vw;
+                       text-align: center;
+                       .padMarg(0, 10% 0 5% 0);
                    }
                }//closes a
             }//closes nav
@@ -81,6 +85,9 @@
         }
         @media@tablet{
             .padMarg(0 0 3% 0, 0);
+            h1{
+                .padMarg(0,0);
+            }
         }
     }//closes headerContent
 }//closes homeHeader
@@ -92,7 +99,11 @@
     background-image: url(../images/aboutUsHeaderImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
-
+    .navDivTwo{
+        @media@tablet{
+            display:none;
+        }
+    }
 
     p{
         max-width: 50%;
