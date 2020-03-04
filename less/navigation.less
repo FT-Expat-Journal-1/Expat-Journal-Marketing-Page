@@ -7,26 +7,29 @@
 
 //general styles for the header/nav section
     height: 95vh;
+    @media@mobile{
+        height: auto;
+    }
     .padMarg(1% 0 0, 0); 
-
 
 
     //nav styles
     .navDiv{
         .flexLayout(row, space-between, center);
+
+        @media@mobile{
+            .flexLayout(column,center,center);
+        }
+        
         //capture logo styling
         a{
             .padMarg(0, 0 3%);
             //mediaqueryformobilelogo
-            @media @mobile{
-                .padMarg(10%, auto 0);
+            @media@mobile{
+                .padMarg(0, 3% 0 2% 0);
             }
         }
-        //mediaqueryfornav
-        @media @mobile{
-            .flexLayout(column, center, center);
-        } 
-        
+       
         .navDivTwo{
             .flexLayout(row, flex-end, center);
             
@@ -43,11 +46,10 @@
                    text-decoration: none;
                }//closes a
             }//closes nav
-
-            //mediaquerytohidenavlinksformobile
-            @media @mobile{
+            @media@mobile{
                 display: none;
             }
+            
         }//closes navDivTwo
 
         
@@ -56,7 +58,10 @@
 //headerContent Styles
     .headerContent{
         .flexLayout(column, center, center);
-        height: 90vh;
+        .padMarg(0, 10% 0 0 0);
+        @media @mobile{
+            .padMarg(0 0 10% 0, 5% 0 0 0);
+        }
     }//closes headerContent
 }//closes homeHeader
 
@@ -67,6 +72,7 @@
     background-image: url(../images/aboutUsHeaderImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
+
 
     p{
         max-width: 50%;
@@ -79,4 +85,6 @@
     background-repeat: no-repeat;
     background-size: 100%;  
     }
+
+    
 }
