@@ -441,3 +441,14 @@ footer .footerStylingDiv {
   margin: 3% 0;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .infoBoxes .teamBox {
+    width: 70%;
+  }
+  .infoBoxes .teamBox h4 {
+    font-size: 5vw;
+  }
+  .infoBoxes .teamBox h5 {
+    font-size: 3.5vw;
+  }
+}
