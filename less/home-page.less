@@ -27,7 +27,7 @@
     }
     background-color: @backgroundColor;
     .flexLayout(row, center, center);
-    @media@mobile{
+    @media@mobile,@tablet{
         .flexLayout(column,center, center);
     }
 
@@ -43,8 +43,11 @@
             @media@mobile{
                 .padMarg(0,0);
             }
+            @media@tablet{
+                .padMarg(0,0 0 0 5%);
+            }
         }
-        @media@mobile{
+        @media@mobile,@tablet{
             .flexLayout(row,space-evenly,center);
             .padMarg(0, 5% 0 0 0);
             max-width: 60%;
@@ -55,15 +58,16 @@
     .contentDiv{
         max-width: 40%;
         .padMarg(0, 0 10%);
-        @media@mobile{
+        @media@mobile,@tablet{
             .padMarg(0, 5% 0);
             max-width: 80%;
+            text-align: center;
         }
     }
 }
 
 .sectionTwo{
-    @media@mobile{
+    @media@mobile,@tablet{
         flex-direction: column-reverse;
     }
 }
