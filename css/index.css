@@ -148,6 +148,12 @@ h1 {
 h2 {
   font-size: 3vw;
 }
+@media (max-width: 500px) {
+  h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
+}
 h4 {
   font-size: 2vw;
 }
@@ -169,6 +175,8 @@ p {
 @media (max-width: 500px) {
   p {
     padding-bottom: 0;
+    font-size: 3vw;
+    text-align: center;
   }
 }
 img {
@@ -321,8 +329,21 @@ footer .footerStylingDiv {
   background-color: #222222;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .sections {
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .sections .imagesDiv {
   display: flex;
@@ -337,10 +358,39 @@ footer .footerStylingDiv {
   padding: 0;
   margin: 0 5%;
 }
+@media (max-width: 500px) {
+  .sections .imagesDiv .secondImg {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .sections .imagesDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 5% 0 0 0;
+    max-width: 60%;
+  }
+}
 .sections .contentDiv {
   max-width: 40%;
   padding: 0;
   margin: 0 10%;
+}
+@media (max-width: 500px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 5% 0;
+    max-width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTwo {
+    flex-direction: column-reverse;
+  }
 }
 .infoBoxes {
   background-color: #F4F4F4;

@@ -22,16 +22,32 @@
 
 .sections{
     height: 55vh;
+    @media@mobile{
+        height: auto;
+    }
     background-color: @backgroundColor;
-    .flexLayout(row, space-between, center);
+    .flexLayout(row, center, center);
+    @media@mobile{
+        .flexLayout(column,center, center);
+    }
+
 
     .imagesDiv{
         .flexLayout(row, space-between, baseline);
+        
         .padMarg(0 2%, 2%);
         max-width: 55%;
 
         .secondImg{
             .padMarg(0,0 5%);
+            @media@mobile{
+                .padMarg(0,0);
+            }
+        }
+        @media@mobile{
+            .flexLayout(row,space-evenly,center);
+            .padMarg(0, 5% 0 0 0);
+            max-width: 60%;
         }
     }
 
@@ -39,5 +55,15 @@
     .contentDiv{
         max-width: 40%;
         .padMarg(0, 0 10%);
+        @media@mobile{
+            .padMarg(0, 5% 0);
+            max-width: 80%;
+        }
+    }
+}
+
+.sectionTwo{
+    @media@mobile{
+        flex-direction: column-reverse;
     }
 }
