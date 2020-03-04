@@ -7,12 +7,11 @@
 
 //general styles for the header/nav section
     height: 95vh;
-    @media@mobile{
+    @media@mobile,@tablet,@desktop{
         height: auto;
     }
-    @media@tablet{
-        height: auto;
-    }
+  
+    
     .padMarg(1% 0 0, 0); 
 
 
@@ -35,7 +34,6 @@
             @media@mobile{
                 .padMarg(0, 3% 0 2% 0);
             }
-
         }
        
         .navDivTwo{
@@ -46,6 +44,9 @@
             }
             
             width: 60%;
+            @media@desktop{
+                width: 90%;
+            }
             button{
                 .padMarg(0, 0 3%);
                 @media@tablet{
@@ -64,6 +65,9 @@
                        font-size: 1.5vw;
                        text-align: center;
                        .padMarg(0, 10% 0 5% 0);
+                   }
+                   @media@desktop{
+                       font-size: 1.5vw;
                    }
                }//closes a
             }//closes nav
