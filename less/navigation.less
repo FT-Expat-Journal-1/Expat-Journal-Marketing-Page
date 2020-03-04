@@ -10,6 +10,9 @@
     @media@mobile{
         height: auto;
     }
+    @media@tablet{
+        height: auto;
+    }
     .padMarg(1% 0 0, 0); 
 
 
@@ -19,6 +22,10 @@
 
         @media@mobile{
             .flexLayout(column,center,center);
+        }
+
+        @media@tablet{
+            .padMarg(0, 3% 0);
         }
         
         //capture logo styling
@@ -32,10 +39,17 @@
        
         .navDivTwo{
             .flexLayout(row, flex-end, center);
+
+            @media@tablet{
+                .flexLayout(row, center, center);
+            }
             
             width: 60%;
             button{
                 .padMarg(0, 0 3%);
+                @media@tablet{
+                    display: none;
+                }
             }
 
             nav{
@@ -44,6 +58,9 @@
                a{
                    .padMarg(0 10%, 0);
                    text-decoration: none;
+                   @media@tablet{
+                       display:none;
+                   }
                }//closes a
             }//closes nav
             @media@mobile{
@@ -62,6 +79,9 @@
         @media @mobile{
             .padMarg(0 0 10% 0, 5% 0 0 0);
         }
+        @media@tablet{
+            .padMarg(0 0 3% 0, 0);
+        }
     }//closes headerContent
 }//closes homeHeader
 
@@ -77,6 +97,9 @@
     p{
         max-width: 50%;
         text-align: center;
+        @media@tablet{
+            max-width: 75%;
+        }
     }
     //mediaqueryforbackground
     @media @mobile{
@@ -85,6 +108,8 @@
     background-repeat: no-repeat;
     background-size: 100%;  
     }
-
+    @media @tablet{
+        background-size: auto;
+    }
     
 }

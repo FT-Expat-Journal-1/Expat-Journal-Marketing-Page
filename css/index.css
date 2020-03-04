@@ -201,6 +201,11 @@ img {
     height: auto;
   }
 }
+@media (max-width: 800px) {
+  .homeHeader {
+    height: auto;
+  }
+}
 .homeHeader .navDiv {
   display: flex;
   flex-direction: row;
@@ -213,6 +218,12 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .homeHeader .navDiv {
+    padding: 0;
+    margin: 3% 0;
   }
 }
 .homeHeader .navDiv a {
@@ -232,9 +243,22 @@ img {
   align-items: center;
   width: 60%;
 }
+@media (max-width: 800px) {
+  .homeHeader .navDiv .navDivTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .homeHeader .navDiv .navDivTwo button {
   padding: 0;
   margin: 0 3%;
+}
+@media (max-width: 800px) {
+  .homeHeader .navDiv .navDivTwo button {
+    display: none;
+  }
 }
 .homeHeader .navDiv .navDivTwo nav {
   width: 30%;
@@ -247,6 +271,11 @@ img {
   padding: 0 10%;
   margin: 0;
   text-decoration: none;
+}
+@media (max-width: 800px) {
+  .homeHeader .navDiv .navDivTwo nav a {
+    display: none;
+  }
 }
 @media (max-width: 500px) {
   .homeHeader .navDiv .navDivTwo {
@@ -267,6 +296,12 @@ img {
     margin: 5% 0 0 0;
   }
 }
+@media (max-width: 800px) {
+  .homeHeader .headerContent {
+    padding: 0 0 3% 0;
+    margin: 0;
+  }
+}
 .homeHeader.aboutUs {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-image: url(../images/aboutUsHeaderImg.png);
@@ -277,12 +312,22 @@ img {
   max-width: 50%;
   text-align: center;
 }
+@media (max-width: 800px) {
+  .homeHeader.aboutUs p {
+    max-width: 75%;
+  }
+}
 @media (max-width: 500px) {
   .homeHeader.aboutUs {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/longAboutUsImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .homeHeader.aboutUs {
+    background-size: auto;
   }
 }
 footer {
