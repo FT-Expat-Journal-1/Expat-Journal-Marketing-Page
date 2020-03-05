@@ -29,7 +29,7 @@
     @media@mobile,@tablet,@desktop,@biggerDesktop,@evenBiggerDesktop{
         height: auto;
     }
-    .padMarg(2% 3%, 0);
+    .padMarg(3% 6%, 0);
 
     background-color: @backgroundColor;
     
@@ -74,6 +74,7 @@
     //styles and queries for text  in sections
     .contentDiv{
         max-width: 40%;
+        text-align: left;
         .padMarg(0, 0 10%);
         @media@biggerDesktop{
             .padMarg(0, 0 5%);
@@ -85,8 +86,12 @@
         @media@mobile,@tablet{
             .padMarg(0, 5% 0);
             max-width: 80%;
+            h2{
             text-align: center;
         }
+        }
+
+        
     }//closes styling and queries for the text in sections
 }//closes Content Sections styling and queries
 

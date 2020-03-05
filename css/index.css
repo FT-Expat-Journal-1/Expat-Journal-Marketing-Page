@@ -163,20 +163,20 @@ h5 {
 a {
   font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
-  font-size: 1vw;
+  font-size: 2vw;
 }
 p {
   font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   line-height: 1.5;
   font-size: 2vw;
+  font-weight: 100;
   padding-bottom: 10px;
 }
 @media (max-width: 500px) {
   p {
     padding-bottom: 0;
     font-size: 3vw;
-    text-align: center;
   }
 }
 img {
@@ -190,9 +190,10 @@ img {
 header {
   background: rgba(0, 0, 0, 0.5);
   background-image: url(../images/headerBGImg.png);
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 780px;
+  height: 835px;
   padding: 2% 0 0;
   margin: 0;
 }
@@ -273,15 +274,7 @@ header .navDiv .navDivTwo nav {
   justify-content: space-around;
   align-items: center;
 }
-@media (max-width: 800px) {
-  header .navDiv .navDivTwo nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px) {
   header .navDiv .navDivTwo nav {
     display: flex;
     flex-direction: row;
@@ -318,14 +311,19 @@ header .headerContent {
 }
 @media (max-width: 1440px), (max-width: 1680px) {
   header .headerContent {
-    padding: 0;
+    padding: 12% 0;
     margin: 0;
   }
 }
-@media (max-width: 800px), (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px) {
   header .headerContent {
-    padding: 0 0 3% 0;
+    padding: 0 0 7% 0;
     margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  header .headerContent p {
+    display: none;
   }
 }
 header.aboutUs {
@@ -371,12 +369,17 @@ footer {
   }
 }
 footer img {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 @media (max-width: 500px) {
   footer img {
-    transform: scale(1);
+    transform: none;
   }
+}
+footer p {
+  padding: 5%;
+  margin: 0;
+  text-align: center;
 }
 footer .footerStylingDiv {
   display: flex;
@@ -409,7 +412,7 @@ footer .footerStylingDiv {
 }
 .sections {
   height: 55vh;
-  padding: 2% 3%;
+  padding: 3% 6%;
   margin: 0;
   background-color: #222222;
   display: flex;
@@ -487,6 +490,7 @@ footer .footerStylingDiv {
 }
 .sections .contentDiv {
   max-width: 40%;
+  text-align: left;
   padding: 0;
   margin: 0 10%;
 }
@@ -508,6 +512,8 @@ footer .footerStylingDiv {
     padding: 0;
     margin: 5% 0;
     max-width: 80%;
+  }
+  .sections .contentDiv h2 {
     text-align: center;
   }
 }
