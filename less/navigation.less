@@ -2,9 +2,10 @@ header{
 //background styles
     background: rgba(0, 0, 0, 0.5);
     background-image: url(../images/headerBGImg.png);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 780px;
+    height: 835px;
 
 //general styles for the header/nav section
     @media@mobile,@tablet,@desktop,@biggerDesktop,@evenBiggerDesktop{
@@ -61,10 +62,10 @@ header{
             nav{
                 width: 60%;
                .flexLayout(row, space-around, center); 
-               @media@tablet{
-                   .flexLayout(column,center,center);
-               }
-               @media@mobile{
+            //    @media@tablet{
+            //        .flexLayout(column,center,center);
+            //    }
+               @media@mobile,@tablet{
                    .flexLayout(row,space-between,center);
                }
     
@@ -94,10 +95,16 @@ header{
         .flexLayout(column, center, center);
         .padMarg(3% 0 0 0,0);
         @media@biggerDesktop,@evenBiggerDesktop{
-            .padMarg(0,0);
+            .padMarg(12% 0,0);
         }
-         @media@tablet,@mobile{
-            .padMarg(0 0 3% 0, 0);
+        @media@mobile,@tablet{
+            .padMarg(0 0 7% 0,0)
+        }//closes media queries for headerContent
+
+        p{
+            @media@mobile{
+                display:none;
+            }
         }
 
        
