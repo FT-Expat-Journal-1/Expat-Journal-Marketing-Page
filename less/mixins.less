@@ -1,15 +1,16 @@
 // Mixins in here
-.flex-layout(@direction,@justify,@align){
+.flexLayout(@direction,@justify,@align){
     display:flex;
     flex-direction:@direction;
     justify-content:@justify;
     align-items:@align;
 }
 
-.padmarg(@padding,@margin){
+.padMarg(@padding,@margin){
     padding:@padding;
     margin:@margin;
 }
 
 //Escapes
-@mobile: ~`(max-width: 500px)`;
+@mobile: ~"(max-width: 500px)";
+@desktop: `"(max-width: 1000px)";
