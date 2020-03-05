@@ -4,6 +4,7 @@
     background-image: url(../images/headerBGImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
+
     //general styles for the header/nav section
     height: 95vh;
     .padMarg(1% 0 0, 0); 
@@ -12,8 +13,8 @@
     .navDiv{
         .flexLayout(row, space-between, center);
 
-        img{
-            .padMarg(0, 0 1%);
+        a{
+            .padMarg(0, 0 3%);
         }//capture logo styling
         
         .navDivTwo{
@@ -44,9 +45,14 @@
 
 
 //aboutUs specific styles
-.aboutUs .homeHeader{
+.homeHeader.aboutUs{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/aboutUsHeaderImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
+
+    p{
+        max-width: 50%;
+        text-align: center;
+    }
 }
