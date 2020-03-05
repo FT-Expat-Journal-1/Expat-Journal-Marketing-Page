@@ -221,6 +221,12 @@ img {
     margin: 3% 0;
   }
 }
+@media (max-width: 500px) {
+  .homeHeader .navDiv {
+    padding: 0;
+    margin: 0;
+  }
+}
 .homeHeader .navDiv a {
   padding: 0;
   margin: 0 3%;
@@ -255,40 +261,50 @@ img {
   padding: 0;
   margin: 0 3%;
 }
-@media (max-width: 800px) {
+@media (max-width: 800px), (max-width: 500px) {
   .homeHeader .navDiv .navDivTwo button {
-    padding: 0;
-    margin: 3% 0;
+    display: none;
   }
 }
 .homeHeader .navDiv .navDivTwo nav {
-  width: 30%;
+  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .homeHeader .navDiv .navDivTwo nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .homeHeader .navDiv .navDivTwo nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .homeHeader .navDiv .navDivTwo nav a {
   padding: 0 10%;
   margin: 0;
   text-decoration: none;
 }
-@media (max-width: 800px) {
-  .homeHeader .navDiv .navDivTwo nav a {
-    font-size: 1.5vw;
-    text-align: center;
-    padding: 0;
-    margin: 10% 0 5% 0;
-  }
-}
 @media (max-width: 1000px) {
   .homeHeader .navDiv .navDivTwo nav a {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 }
-@media (max-width: 500px) {
-  .homeHeader .navDiv .navDivTwo {
-    display: none;
+@media (max-width: 800px) {
+  .homeHeader .navDiv .navDivTwo nav a {
+    font-size: 2vw;
+    text-align: center;
+    padding: 0;
+    margin: 3% 0;
   }
 }
 .homeHeader .headerContent {
@@ -299,19 +315,9 @@ img {
   padding: 0;
   margin: 10% 0 0 0;
 }
-@media (max-width: 500px) {
-  .homeHeader .headerContent {
-    padding: 0 0 10% 0;
-    margin: 5% 0 0 0;
-  }
-}
-@media (max-width: 800px) {
+@media (max-width: 800px), (max-width: 500px) {
   .homeHeader .headerContent {
     padding: 0 0 3% 0;
-    margin: 0;
-  }
-  .homeHeader .headerContent h1 {
-    padding: 0;
     margin: 0;
   }
 }
@@ -319,7 +325,7 @@ img {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-image: url(../images/aboutUsHeaderImg.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
 }
 @media (max-width: 800px) {
   .homeHeader.aboutUs .navDivTwo {
@@ -330,9 +336,14 @@ img {
   max-width: 50%;
   text-align: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 800px), (max-width: 1000px) {
   .homeHeader.aboutUs p {
     max-width: 75%;
+  }
+}
+@media (max-width: 800px), (max-width: 1000px) {
+  .homeHeader.aboutUs {
+    background-size: auto;
   }
 }
 @media (max-width: 500px) {
@@ -341,11 +352,6 @@ img {
     background-image: url(../images/longAboutUsImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
-  }
-}
-@media (max-width: 800px) {
-  .homeHeader.aboutUs {
-    background-size: auto;
   }
 }
 footer {
@@ -388,6 +394,12 @@ footer .footerStylingDiv {
   background: #F4F4F4;
   color: #38A1DE;
 }
+@media (max-width: 1000px), (max-width: 800px) {
+  .theButton {
+    height: 40px;
+    width: 150px;
+  }
+}
 .separatingDivs {
   height: 5vh;
   background-color: #F4F4F4;
@@ -410,19 +422,19 @@ footer .footerStylingDiv {
     height: auto;
   }
 }
-@media (max-width: 500px), (max-width: 800px) {
-  .sections {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 @media (max-width: 1000px) {
   .sections {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -478,19 +490,19 @@ footer .footerStylingDiv {
   padding: 0;
   margin: 0 10%;
 }
+@media (max-width: 1000px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 0;
+    max-width: 30%;
+  }
+}
 @media (max-width: 500px), (max-width: 800px) {
   .sections .contentDiv {
     padding: 0;
     margin: 5% 0;
     max-width: 80%;
     text-align: center;
-  }
-}
-@media (max-width: 1000px) {
-  .sections .contentDiv {
-    padding: 0;
-    margin: 0;
-    max-width: 30%;
   }
 }
 @media (max-width: 500px), (max-width: 800px) {
@@ -537,6 +549,11 @@ footer .footerStylingDiv {
   margin: 3% 0;
   text-align: center;
 }
+@media (max-width: 800px) {
+  .infoBoxes .teamBox {
+    width: 35%;
+  }
+}
 @media (max-width: 500px) {
   .infoBoxes .teamBox {
     width: 70%;
@@ -546,10 +563,5 @@ footer .footerStylingDiv {
   }
   .infoBoxes .teamBox h5 {
     font-size: 3.5vw;
-  }
-}
-@media (max-width: 800px) {
-  .infoBoxes .teamBox {
-    width: 35%;
   }
 }

@@ -26,6 +26,10 @@
         @media@tablet{
             .padMarg(0, 3% 0);
         }
+
+        @media@mobile{
+            .padMarg(0,0);
+        }
         
         //capture logo styling
         a{
@@ -49,31 +53,39 @@
             }
             button{
                 .padMarg(0, 0 3%);
-                @media@tablet{
-                    .padMarg(0, 3% 0);
+                @media@tablet,@mobile{
+                    // .padMarg(0, 3% 0);
+                    display:none;
                 }
             }
 
             nav{
-                width: 30%;
-               .flexLayout(row, space-between, center); 
+                width: 60%;
+               .flexLayout(row, space-around, center); 
+               @media@tablet{
+                   .flexLayout(column,center,center);
+               }
+               @media@mobile{
+                   .flexLayout(row,space-between,center);
+               }
     
                a{
                    .padMarg(0 10%, 0);
                    text-decoration: none;
-                   @media@tablet{
-                       font-size: 1.5vw;
-                       text-align: center;
-                       .padMarg(0, 10% 0 5% 0);
-                   }
                    @media@desktop{
-                       font-size: 1.5vw;
+                       font-size: 2vw;
                    }
+                   @media@tablet{
+                       font-size: 2vw;
+                       text-align: center;
+                        .padMarg(0, 3% 0);
+                   }
+                   
                }//closes a
             }//closes nav
-            @media@mobile{
-                display: none;
-            }
+            // @media@mobile{
+            //     display: none;
+            // }
             
         }//closes navDivTwo
 
@@ -84,15 +96,16 @@
     .headerContent{
         .flexLayout(column, center, center);
         .padMarg(0, 10% 0 0 0);
-        @media @mobile{
-            .padMarg(0 0 10% 0, 5% 0 0 0);
-        }
-        @media@tablet{
+         @media@tablet,@mobile{
             .padMarg(0 0 3% 0, 0);
-            h1{
-                .padMarg(0,0);
-            }
+            // h1,p{
+            //     display:none;
+            // }
         }
+        // @media @mobile{
+        //     .padMarg(0 0 10% 0, 5% 0 0 0);
+        // }
+       
     }//closes headerContent
 }//closes homeHeader
 
@@ -102,7 +115,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/aboutUsHeaderImg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
     .navDivTwo{
         @media@tablet{
             display:none;
@@ -112,19 +125,19 @@
     p{
         max-width: 50%;
         text-align: center;
-        @media@tablet{
+        @media@tablet,@desktop{
             max-width: 75%;
         }
     }
     //mediaqueryforbackground
+    @media @tablet,@desktop{
+        background-size: auto;
+    }
     @media @mobile{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/longAboutUsImg.png);
     background-repeat: no-repeat;
     background-size: 100%;  
-    }
-    @media @tablet{
-        background-size: auto;
     }
     
 }

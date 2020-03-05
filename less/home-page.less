@@ -10,6 +10,12 @@
         background: @textColor;
         color: @buttonColor;
     }
+
+    @media@desktop,@tablet{
+        height: 40px;
+        width: 150px;
+    }
+    
     
 }
 .separatingDivs{
@@ -27,12 +33,13 @@
     }
     background-color: @backgroundColor;
     .flexLayout(row, space-between, center);
+     @media@desktop{
+        .flexLayout(row, space-around, center);
+    }
     @media@mobile,@tablet{
         .flexLayout(column,center, center);
     }
-    @media@desktop{
-        .flexLayout(row, space-around, center);
-    }
+   
 
 
     .imagesDiv{
@@ -66,14 +73,14 @@
     .contentDiv{
         max-width: 40%;
         .padMarg(0, 0 10%);
+        @media@desktop{
+            .padMarg(0,0);
+            max-width: 30%;
+        }
         @media@mobile,@tablet{
             .padMarg(0, 5% 0);
             max-width: 80%;
             text-align: center;
-        }
-        @media@desktop{
-            .padMarg(0,0);
-            max-width: 30%;
         }
     }
 }
