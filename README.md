@@ -28,12 +28,12 @@ For your project this week, you will demonstrate proficiency by working with a g
 ## ** HTML/CSS **
 - [1] Student did not deploy HTML/CSS marketing site. Did not demonstrate firm understanding CSS and HTML fundamentals. Student can not demonstrate individual contribution of HTML/CSS for site. 
 - [2] HTML/CSS site is deployed. Student laid out all elements of the design. Note: there may be visible user interface inconsistencies across the project, but all elements are on the page. 
-- [3] Student laid out the design that matches the example perfectly. CSS fundamentals such as: box model, flexbox, and positioning were used appropriately.
+- [3-when viewed using responsive devTools in Chrome] Student laid out the design that matches the example perfectly. CSS fundamentals such as: box model, flexbox, and positioning were used appropriately.
 
 ## **Responsiveness**
 - [1] Deployed site does not have any responsiveness to width of browser. Items fall off the screen or do not work at all widths. Student can not demonstrate individual contribution of responsiveness for site. 
 - [2] Deployed site is responsive to width of browser. All elements are visible at any width of the screen. There is a usable layout at desktop 1000px+ and mobile 500px-.  
-- [3] Phone views look professional at 500px and below and Desktop views look professional at 1000px and above. No horizontal scrollbars exist. Tablet views look professional at 800px and above. Responsive units are used for font-sizing.
+- [3-when viewed using responsive devTools in Chrome] Phone views look professional at 500px and below and Desktop views look professional at 1000px and above. No horizontal scrollbars exist. Tablet views look professional at 800px and above. Responsive units are used for font-sizing.
 
 ## **PreProcessing**
 - [1] Student does not have any less files or less is not complied to CSS. Student can not demonstrate
