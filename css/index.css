@@ -83,7 +83,6 @@ time,
 mark,
 audio,
 video {
-  border: 1px solid black;
   font-size: 100%;
   font: inherit;
   vertical-align: middle;
@@ -133,7 +132,7 @@ html {
 }
 html,
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 h1,
 h2,
@@ -155,15 +154,15 @@ h4 {
   padding-bottom: 10px;
 }
 a {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   font-size: 1.5rem;
 }
 p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding-bottom: 10px;
 }
 img {
@@ -212,7 +211,7 @@ img {
   align-items: center;
 }
 .homeHeader .navDiv .navDivTwo nav a {
-  padding: 0 11%;
+  padding: 0 10%;
   margin: 0;
   text-decoration: none;
 }
@@ -222,6 +221,30 @@ img {
   justify-content: center;
   align-items: center;
   height: 90vh;
+}
+.aboutUs .homeHeader {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: url(../images/aboutUsHeaderImg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+footer {
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5));
+  background-image: url(../images/footerImg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 70vh;
+  padding: 1% 0 0;
+  margin: 0;
+}
+footer .footerStylingDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  margin: 0;
+  height: 50vh;
 }
 .theButton {
   border-radius: 5px;
@@ -233,4 +256,34 @@ img {
 .theButton:hover {
   background: #F4F4F4;
   color: #38A1DE;
+}
+.separatingDivs {
+  height: 5vh;
+  background-color: #F4F4F4;
+}
+.sections {
+  height: 55vh;
+  background-color: #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sections .imagesDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2%;
+  margin: 2%;
+  max-width: 55%;
+}
+.sections .imagesDiv .secondImg {
+  padding: 0;
+  margin: 0 5%;
+}
+.sections .contentDiv {
+  max-width: 40%;
+  padding: 0;
+  margin: 0 10%;
 }

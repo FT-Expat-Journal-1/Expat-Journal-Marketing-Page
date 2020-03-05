@@ -12,3 +12,29 @@
     }
     
 }
+.separatingDivs{
+    height: 5vh;
+    background-color: @textColor;
+}
+
+.sections{
+    height: 55vh;
+    background-color: @backgroundColor;
+    .flexLayout(row, space-between, center);
+
+    .imagesDiv{
+        .flexLayout(row, space-between, baseline);
+        .padMarg(0 2%, 2%);
+        max-width: 55%;
+
+        .secondImg{
+            .padMarg(0,0 5%);
+        }
+    }
+
+
+    .contentDiv{
+        max-width: 40%;
+        .padMarg(0, 0 10%);
+    }
+}
