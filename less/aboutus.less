@@ -1,9 +1,14 @@
+//styles for section containing info cards
 .infoBoxes{
     background-color: @textColor;
     color: @backgroundColor;
     .flexLayout(row, space-evenly, center);
     flex-wrap: wrap;
 
+    @media @mobile {
+        .flexLayout(column, center, space-evenly);
+    }
+    //styling and queries for boxes specifically
     .teamBox{
         background: #FDFAFA;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08); 
@@ -21,5 +26,18 @@
             .padMarg(0, 3% 0);
             text-align: center;
         }
-    }
-}
+        @media@tablet{
+            width: 35%;
+        }     
+        @media@mobile{
+            width: 70%;
+            h4{
+                font-size: 5vw;
+            }
+            h5{
+                font-size: 3.5vw;
+            }
+        }//closes final media query
+
+    }//closes styling for individual boxes
+}//closes styling for info-card section

@@ -1,58 +1,136 @@
-.homeHeader{
-    //background styles
+header{
+//background styles
     background: rgba(0, 0, 0, 0.5);
     background-image: url(../images/headerBGImg.png);
     background-repeat: no-repeat;
     background-size: 100%;
 
-    //general styles for the header/nav section
+//general styles for the header/nav section
     height: 95vh;
+    @media@mobile,@tablet,@desktop{
+        height: auto;
+    }
     .padMarg(1% 0 0, 0); 
 
-//nav styles
+
+    //nav styles
     .navDiv{
         .flexLayout(row, space-between, center);
 
+        @media@mobile,@tablet{
+            .flexLayout(column,center,center);
+        }
+        
+        @media@tablet{
+            .padMarg(0, 3% 0);
+        }
+
+        @media@mobile{
+            .padMarg(0,0);
+        }
+        
+        //logo (img nested within a) styles and queries
         a{
             .padMarg(0, 0 3%);
-        }//capture logo styling
-        
+            //mediaqueryformobilelogo
+            @media@mobile{
+                .padMarg(0, 3% 0 2% 0);
+            }
+        }//closes a that holds the capture logo
+       
+        //navDivTwo is parent to button and nav       
         .navDivTwo{
             .flexLayout(row, flex-end, center);
-            
             width: 60%;
-            button{
-                .padMarg(0, 0 3%);
+            @media@tablet{
+                .flexLayout(column, center, center);
+            }
+            @media@desktop{
+                width: 90%;
             }
 
+
+            button{
+                .padMarg(0, 0 3%);
+                @media@tablet,@mobile{
+                    display:none;
+                }//hiding sign up button for tablet/mobile
+            }//closes button style and queries for nav
+
+            //nav is parent to a links
             nav{
-                width: 30%;
-               .flexLayout(row, space-between, center); 
+                width: 60%;
+               .flexLayout(row, space-around, center); 
+               @media@tablet{
+                   .flexLayout(column,center,center);
+               }
+               @media@mobile{
+                   .flexLayout(row,space-between,center);
+               }
+    
                a{
                    .padMarg(0 10%, 0);
                    text-decoration: none;
-               }//closes a
+                   @media@desktop{
+                       font-size: 2vw;
+                   }
+                   @media@tablet{
+                       font-size: 2vw;
+                       text-align: center;
+                        .padMarg(0, 3% 0);
+                   }
+               }//closes a links in nav
+
             }//closes nav
+         
         }//closes navDivTwo
+
     }//closes navDiv
 
-//headerContent Styles
+
+    //headerContent Styles
     .headerContent{
         .flexLayout(column, center, center);
-        height: 90vh;
+        .padMarg(0, 10% 0 0 0);
+
+         @media@tablet,@mobile{
+            .padMarg(0 0 3% 0, 0);
+        }
+       
     }//closes headerContent
+
 }//closes homeHeader
 
 
-//aboutUs specific styles
+//aboutus.html specific styles
 .homeHeader.aboutUs{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/aboutUsHeaderImg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
+    .navDivTwo{
+        @media@tablet{
+            display:none;
+        }//hiding nav on aboutus.html
+    }//closes navDivTwo
 
     p{
         max-width: 50%;
         text-align: center;
+        @media@tablet,@desktop{
+            max-width: 75%;
+        }
+    }//closes p styling
+
+    //mediaqueryforbackground
+    @media @tablet,@desktop{
+        background-size: auto;
     }
-}
+    @media @mobile{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-image: url(../images/longAboutUsImg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    }
+    
+}//closes header styling

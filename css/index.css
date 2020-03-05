@@ -143,28 +143,41 @@ h5 {
   color: #F4F4F4;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4vw;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 3vw;
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
 }
 h4 {
-  font-size: 2rem;
+  font-size: 2vw;
 }
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 a {
   font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
-  font-size: 1.5rem;
+  font-size: 1vw;
 }
 p {
   font-family: 'Nanum Gothic', sans-serif;
   color: #F4F4F4;
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 2vw;
   padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+  p {
+    padding-bottom: 0;
+    font-size: 3vw;
+    text-align: center;
+  }
 }
 img {
   max-width: 100%;
@@ -174,7 +187,7 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-.homeHeader {
+header {
   background: rgba(0, 0, 0, 0.5);
   background-image: url(../images/headerBGImg.png);
   background-repeat: no-repeat;
@@ -183,64 +196,184 @@ img {
   padding: 1% 0 0;
   margin: 0;
 }
-.homeHeader .navDiv {
+@media (max-width: 500px), (max-width: 800px), (max-width: 1000px) {
+  header {
+    height: auto;
+  }
+}
+header .navDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.homeHeader .navDiv a {
+@media (max-width: 500px), (max-width: 800px) {
+  header .navDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  header .navDiv {
+    padding: 0;
+    margin: 3% 0;
+  }
+}
+@media (max-width: 500px) {
+  header .navDiv {
+    padding: 0;
+    margin: 0;
+  }
+}
+header .navDiv a {
   padding: 0;
   margin: 0 3%;
 }
-.homeHeader .navDiv .navDivTwo {
+@media (max-width: 500px) {
+  header .navDiv a {
+    padding: 0;
+    margin: 3% 0 2% 0;
+  }
+}
+header .navDiv .navDivTwo {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   width: 60%;
 }
-.homeHeader .navDiv .navDivTwo button {
+@media (max-width: 800px) {
+  header .navDiv .navDivTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+  header .navDiv .navDivTwo {
+    width: 90%;
+  }
+}
+header .navDiv .navDivTwo button {
   padding: 0;
   margin: 0 3%;
 }
-.homeHeader .navDiv .navDivTwo nav {
-  width: 30%;
+@media (max-width: 800px), (max-width: 500px) {
+  header .navDiv .navDivTwo button {
+    display: none;
+  }
+}
+header .navDiv .navDivTwo nav {
+  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-.homeHeader .navDiv .navDivTwo nav a {
+@media (max-width: 800px) {
+  header .navDiv .navDivTwo nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  header .navDiv .navDivTwo nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+header .navDiv .navDivTwo nav a {
   padding: 0 10%;
   margin: 0;
   text-decoration: none;
 }
-.homeHeader .headerContent {
+@media (max-width: 1000px) {
+  header .navDiv .navDivTwo nav a {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 800px) {
+  header .navDiv .navDivTwo nav a {
+    font-size: 2vw;
+    text-align: center;
+    padding: 0;
+    margin: 3% 0;
+  }
+}
+header .headerContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  padding: 0;
+  margin: 10% 0 0 0;
+}
+@media (max-width: 800px), (max-width: 500px) {
+  header .headerContent {
+    padding: 0 0 3% 0;
+    margin: 0;
+  }
 }
 .homeHeader.aboutUs {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-image: url(../images/aboutUsHeaderImg.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
+}
+@media (max-width: 800px) {
+  .homeHeader.aboutUs .navDivTwo {
+    display: none;
+  }
 }
 .homeHeader.aboutUs p {
   max-width: 50%;
   text-align: center;
+}
+@media (max-width: 800px), (max-width: 1000px) {
+  .homeHeader.aboutUs p {
+    max-width: 75%;
+  }
+}
+@media (max-width: 800px), (max-width: 1000px) {
+  .homeHeader.aboutUs {
+    background-size: auto;
+  }
+}
+@media (max-width: 500px) {
+  .homeHeader.aboutUs {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-image: url(../images/longAboutUsImg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 footer {
   background: linear-gradient(0deg, rgba(34, 34, 34, 0.5), rgba(34, 34, 34, 0.5));
   background-image: url(../images/footerImg.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 70vh;
   padding: 1% 0 0;
   margin: 0;
+}
+@media (max-width: 500px) {
+  footer {
+    background-size: auto;
+  }
+}
+footer img {
+  transform: scale(1.5);
+}
+@media (max-width: 500px) {
+  footer img {
+    transform: scale(1);
+  }
 }
 footer .footerStylingDiv {
   display: flex;
@@ -249,7 +382,6 @@ footer .footerStylingDiv {
   align-items: center;
   padding: 5%;
   margin: 0;
-  height: 50vh;
 }
 .theButton {
   border-radius: 5px;
@@ -262,9 +394,20 @@ footer .footerStylingDiv {
   background: #F4F4F4;
   color: #38A1DE;
 }
+@media (max-width: 1000px), (max-width: 800px) {
+  .theButton {
+    height: 40px;
+    width: 150px;
+  }
+}
 .separatingDivs {
   height: 5vh;
   background-color: #F4F4F4;
+}
+@media (max-width: 500px) {
+  .separatingDivs {
+    height: 2.5vh;
+  }
 }
 .sections {
   height: 55vh;
@@ -273,6 +416,27 @@ footer .footerStylingDiv {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sections {
+    height: auto;
+  }
+}
+@media (max-width: 1000px) {
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .sections .imagesDiv {
   display: flex;
@@ -283,14 +447,68 @@ footer .footerStylingDiv {
   margin: 2%;
   max-width: 55%;
 }
+@media (max-width: 1000px) {
+  .sections .imagesDiv {
+    max-width: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
 .sections .imagesDiv .secondImg {
   padding: 0;
   margin: 0 5%;
+}
+@media (max-width: 500px), (max-width: 1000px) {
+  .sections .imagesDiv .secondImg {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  .sections .imagesDiv .secondImg {
+    padding: 0;
+    margin: 0 0 0 5%;
+  }
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sections .imagesDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    margin: 5% 0 0 0;
+    max-width: 60%;
+  }
 }
 .sections .contentDiv {
   max-width: 40%;
   padding: 0;
   margin: 0 10%;
+}
+@media (max-width: 1000px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 0;
+    max-width: 30%;
+  }
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 5% 0;
+    max-width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 500px), (max-width: 800px) {
+  .sectionTwo {
+    flex-direction: column-reverse;
+  }
 }
 .infoBoxes {
   background-color: #F4F4F4;
@@ -300,6 +518,14 @@ footer .footerStylingDiv {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  .infoBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+  }
 }
 .infoBoxes .teamBox {
   background: #FDFAFA;
@@ -322,4 +548,20 @@ footer .footerStylingDiv {
   padding: 0;
   margin: 3% 0;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .infoBoxes .teamBox {
+    width: 35%;
+  }
+}
+@media (max-width: 500px) {
+  .infoBoxes .teamBox {
+    width: 70%;
+  }
+  .infoBoxes .teamBox h4 {
+    font-size: 5vw;
+  }
+  .infoBoxes .teamBox h5 {
+    font-size: 3.5vw;
+  }
 }
