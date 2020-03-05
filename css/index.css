@@ -192,11 +192,11 @@ header {
   background-image: url(../images/headerBGImg.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 95vh;
+  height: 900px;
   padding: 1% 0 0;
   margin: 0;
 }
-@media (max-width: 500px), (max-width: 800px), (max-width: 1000px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 1000px), (max-width: 1440px), (max-width: 1680px) {
   header {
     height: auto;
   }
@@ -290,6 +290,7 @@ header .navDiv .navDivTwo nav {
   }
 }
 header .navDiv .navDivTwo nav a {
+  white-space: nowrap;
   padding: 0 10%;
   margin: 0;
   text-decoration: none;
@@ -315,43 +316,49 @@ header .headerContent {
   padding: 0;
   margin: 10% 0 0 0;
 }
+@media (max-width: 1440px), (max-width: 1680px) {
+  header .headerContent {
+    padding: 0;
+    margin: 0;
+  }
+}
 @media (max-width: 800px), (max-width: 500px) {
   header .headerContent {
     padding: 0 0 3% 0;
     margin: 0;
   }
 }
-.homeHeader.aboutUs {
+header.aboutUs {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-image: url(../images/aboutUsHeaderImg.png);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 @media (max-width: 800px) {
-  .homeHeader.aboutUs .navDivTwo {
+  header.aboutUs .navDivTwo {
     display: none;
   }
 }
-.homeHeader.aboutUs p {
+header.aboutUs p {
   max-width: 50%;
   text-align: center;
 }
 @media (max-width: 800px), (max-width: 1000px) {
-  .homeHeader.aboutUs p {
+  header.aboutUs p {
     max-width: 75%;
   }
 }
-@media (max-width: 800px), (max-width: 1000px) {
-  .homeHeader.aboutUs {
+@media (max-width: 800px), (max-width: 1000px), (max-width: 1440px), (max-width: 1680px) {
+  header.aboutUs {
     background-size: auto;
   }
 }
-@media (max-width: 500px) {
-  .homeHeader.aboutUs {
+@media (max-width: 500px), (max-width: 800px), (max-width: 1000px) {
+  header.aboutUs {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     background-image: url(../images/longAboutUsImg.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
   }
 }
 footer {
@@ -394,30 +401,26 @@ footer .footerStylingDiv {
   background: #F4F4F4;
   color: #38A1DE;
 }
-@media (max-width: 1000px), (max-width: 800px) {
+@media (max-width: 1440px), (max-width: 1000px), (max-width: 800px) {
   .theButton {
     height: 40px;
     width: 150px;
   }
 }
 .separatingDivs {
-  height: 5vh;
+  height: 2.5vh;
   background-color: #F4F4F4;
-}
-@media (max-width: 500px) {
-  .separatingDivs {
-    height: 2.5vh;
-  }
 }
 .sections {
   height: 55vh;
   background-color: #222222;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 500px), (max-width: 800px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 1000px), (max-width: 1440px), (max-width: 1680px) {
   .sections {
     height: auto;
   }
@@ -447,17 +450,6 @@ footer .footerStylingDiv {
   margin: 2%;
   max-width: 55%;
 }
-@media (max-width: 1000px) {
-  .sections .imagesDiv {
-    max-width: 50%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-}
 .sections .imagesDiv .secondImg {
   padding: 0;
   margin: 0 5%;
@@ -472,6 +464,17 @@ footer .footerStylingDiv {
   .sections .imagesDiv .secondImg {
     padding: 0;
     margin: 0 0 0 5%;
+  }
+}
+@media (max-width: 1000px), (max-width: 1440px), (max-width: 1680px) {
+  .sections .imagesDiv {
+    max-width: 55%;
+    padding: 5%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
   }
 }
 @media (max-width: 500px), (max-width: 800px) {
@@ -490,11 +493,17 @@ footer .footerStylingDiv {
   padding: 0;
   margin: 0 10%;
 }
+@media (max-width: 1440px) {
+  .sections .contentDiv {
+    padding: 0;
+    margin: 0 5%;
+  }
+}
 @media (max-width: 1000px) {
   .sections .contentDiv {
     padding: 0;
     margin: 0;
-    max-width: 30%;
+    max-width: 25%;
   }
 }
 @media (max-width: 500px), (max-width: 800px) {
