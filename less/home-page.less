@@ -10,30 +10,28 @@
         background: @textColor;
         color: @buttonColor;
     }
-
-    @media@desktop,@tablet{
+    
+    @media@biggerDesktop,@desktop,@tablet{
         height: 40px;
         width: 150px;
     }//media query to change size of button
        
 }//closes button styles
 .separatingDivs{
-    height: 5vh;
+    height: 2.5vh;
     background-color: @textColor;
-    @media@mobile{
-        height: 2.5vh;
-    }//media query to alter height
 }//close separating divs for styling purposes
 
 
 //Content Sections Styles
 .sections{
     height: 55vh;
-    @media@mobile,@tablet{
+    @media@mobile,@tablet,@desktop,@biggerDesktop,@evenBiggerDesktop{
         height: auto;
     }
 
     background-color: @backgroundColor;
+    overflow: hidden;
 
     .flexLayout(row, space-between, center);
      @media@desktop{
@@ -49,12 +47,7 @@
         
         .padMarg(0 2%, 2%);
         max-width: 55%;
-        @media@desktop{
-            max-width: 50%;
-            .padMarg(0,0); 
-            .flexLayout(row, space-around, baseline);
-        }
-
+ 
         .secondImg{
             .padMarg(0,0 5%);
             @media@mobile,@desktop{
@@ -64,20 +57,29 @@
                 .padMarg(0,0 0 0 5%);
             }
         }//closes secondImg styling
+        //queries for imagesDiv
+        @media@desktop,@biggerDesktop,@evenBiggerDesktop{
+            max-width: 55%;
+            .padMarg(5%,0); 
+            .flexLayout(row, space-around, baseline);
+        }
         @media@mobile,@tablet{
             .flexLayout(row,space-evenly,center);
             .padMarg(0, 5% 0 0 0);
             max-width: 60%;
-        }
+        }//query for imagesDiv
     }//closes styling and queries for images in the sections
 
     //styles and queries for text  in sections
     .contentDiv{
         max-width: 40%;
         .padMarg(0, 0 10%);
+        @media@biggerDesktop{
+            .padMarg(0, 0 5%);
+        }
         @media@desktop{
             .padMarg(0,0);
-            max-width: 30%;
+            max-width: 25%;
         }
         @media@mobile,@tablet{
             .padMarg(0, 5% 0);
